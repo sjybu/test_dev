@@ -6,7 +6,8 @@
 </head>
 <body>
 <h1>测试平台</h1>
-<form method="get">
+<form method="post"  action="/login_action/">
+    {% csrf_token %}
     <input name="username" type="text" placeholder="请输入用户名"><br>
     <input name="password" type="password" placeholder="请输入密码"><br>
     {{ error }}<br>
